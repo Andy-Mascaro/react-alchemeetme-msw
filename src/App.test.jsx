@@ -33,7 +33,6 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-
 test('Should render the header', async () => {
   render(<App />)
   const banner = screen.getByRole('banner')
