@@ -4,10 +4,11 @@
 import { screen, render } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
+import App from './App';
 // 🚨
 // import rest
 // import setupServer
-import App from './App'
+
 
 
 const user = {
@@ -47,6 +48,7 @@ test('Should render the header', async () => {
 })
 
 test('Should render the header with Sasuke 🌬️🔥', async () => {
+  render(<App />)
   const sasuke = {
     id: 1,
     created_at: '2021-12-13T00:17:29+00:00',
